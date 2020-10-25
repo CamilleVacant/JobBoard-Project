@@ -1,0 +1,43 @@
+<%- include('../partials/header_admin'); %>
+  <h2 class="titre">Gerer les annonces</h2>
+  <main>
+    <div class="row center-align">
+      <table>
+        <thread>
+          <tr>
+            <th>ID</th>
+            <th>Titre</th>
+            <th>Date de publication</th>
+            <th>Début du contrat</th>
+            <th>Mission</th>
+            <th>Type de contrat</th>
+            <th>Salaire</th>
+            <th>Profil souhaité</th>
+            <th>
+              <a href="/advertisements/add_advertisements">Ajouter</a>
+            </th>
+          </tr>
+        </thread>
+        <% for (const advert of model) { %> 
+        <tbody>
+          <tr>
+            <td><%= advert.ad_id %></td>
+            <td><%= advert.ad_title %></td>
+            <td><%= advert.ad_pubdate %></td>
+            <td><%= advert.ad_startdate %></td>
+            <td><%= advert.ad_mission %></td>
+            <td><%= advert.ad_jobtype%></td>
+            <td><%= advert.ad_wage%></td>
+            <td><%= advert.ad_wantedprofil%></td>
+            <td>
+              <a href="/advertisements/update_advertisements/<%= advert.ad_id%>">Modifier</a>
+              <br>
+              <a href="/advertisements/delete_advertisements/<%= advert.ad_id%>">Effacer</a>
+            </td>
+          </tr>
+        </tbody>
+        <% } %>
+      </table> 
+    </div>
+  </main>
+    <%- include('../partials/footer_admin') %>

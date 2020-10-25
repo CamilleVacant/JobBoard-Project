@@ -1,0 +1,36 @@
+<%- include('../partials/header_admin'); %>
+
+<h2 class="titre">Gérer les utilisateurs</h2>
+  <main>
+    <div class="row center-align">
+      <table>
+        <thread>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>E-mail</th>
+            <th>
+              <a href="/people/add_people">Ajouter</a>
+            </th>
+          </tr>
+        </thread>
+
+      <% for (const person of model) { %> 
+        <tbody>
+          <tr>
+            <td><%= person.pe_id %></td>
+            <td><%= person.pe_lname %></td>
+            <td><%= person.pe_fname %></td>
+            <td><%= person.pe_email %></td>
+            <td>
+              <a href="/people/update_people/<%= person.pe_id%>">Modifier</a>
+              <a href="/people/delete_people/<%= person.pe_id%>">Effacer</a>
+            </td>
+          </tr>
+        </tbody>
+        <% } %>
+      </table> 
+    </div>
+  </main>
+    <%- include('../partials/footer_admin') %>

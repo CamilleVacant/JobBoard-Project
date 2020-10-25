@@ -1,0 +1,40 @@
+<%- include('../partials/header_admin'); %>
+<main>
+  <h2 class="titre">Modifier une entreprise</h2>
+  <div class="row align-center">
+    <% for (const company of model) { %> 
+    <form action="/companies/update_companies/<%= company.co_id %>" method="post">
+      <div>
+        <label for="Name">Nom de l'entreprise</label>
+        <input required name="Name" value="<%= company.co_name %>" />
+      </div>
+      
+      <div>
+        <label for="Address">Adresse</label>
+        <input required name="Address" value="<%= company.co_address %>" />
+      </div>
+      
+      <div>
+          <label for="CP">Code Postal</label>
+          <input required name="CP" value ="<%= company.co_CP%>"/>
+      </div>
+
+      <div>
+        <label for="City">Ville</label>
+        <input required name="City" value ="<%= company.co_city%>"/>
+      </div>
+
+      <div>
+        <label for="Description">Description</label>
+        <input required name="Description" value ="<%= company.co_description%>"/>
+      </div>
+      <% } %>  
+      <div>
+        <button class="btn indigo"><a class="white-text" href="/companies">Annuler</a></button>
+        <input class="btn indigo" type="submit" value="Modifier"/>
+      </div>
+    </form>
+  </div>
+</main>
+
+<%- include("footer_admin") -%>

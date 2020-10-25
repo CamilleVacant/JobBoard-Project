@@ -1,0 +1,41 @@
+<%- include('../partials/header_admin') %>
+<h2 class="titre">Gérer les entreprises</h2>
+  <main>
+    <div class="row center-align">
+      <table>
+        <thread>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Addresse</th>
+          <th>CP</th>
+          <th>Ville</th>
+          <th>Description</th>
+          <th>
+            <a href="/companies/add_companies">Ajouter</a>
+          </th>
+        </tr>
+      </thread>
+
+      <% for (const company of model) { %> 
+        <tbody>
+          <tr>
+            <td><%= company.co_id %></td>
+            <td><%= company.co_name %></td>
+            <td><%= company.co_address %></td>
+            <td><%= company.co_CP %></td>
+            <td><%= company.co_city %></td>
+            <td><%= company.co_description%></td>
+            <td>
+              <a href="/companies/update_companies/<%= company.co_id%>">Modifier</a>
+              <br>
+              <a href="/companies/delete_companies/<%= company.co_id%>">Effacer</a>
+            </td>
+          </tr>
+        </tbody>
+        <% } %>
+
+      </table> 
+    </div>
+  </main>
+    <%- include('../partials/footer_admin') %>

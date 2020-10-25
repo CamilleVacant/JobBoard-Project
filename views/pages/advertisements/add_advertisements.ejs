@@ -1,0 +1,68 @@
+<%- include('../partials/header_admin'); %>
+
+<main>
+  <h2 class="titre">Ajouter une annonce</h2>
+  <div class="row align-center">
+    <form action="/advertisements/add_advertisements" method="post">
+      <div>
+
+        <div>
+          <label for="Title">Titre de l'annonce</label>
+          <input required name="Title"/>
+        </div>
+          
+        <div>
+          <label for="Pubdate">Date de publication</label>
+          <input type="date" required name="Pubdate"/>
+        </div>
+          
+        <div>
+            <label for="Startdate">Début du contrat</label>
+            <input type="date" required name="Startdate"/>
+        </div>
+
+        <div>
+          <label for="Mission">Mission</label>
+          <input required name="Mission"/>
+        </div>
+
+        <div>
+          <label for="Jobtype">Type de contrat</label>
+          <input required name="Jobtype"/>
+        </div>
+
+        <div>
+          <label for="Wage">Salaire</label>
+          <input required name="Wage"/>
+        </div>
+
+        <div>
+          <label for="Wantedprofil">Profil recherché</label>
+          <input required name="Wantedprofil"/>
+        </div>
+
+        <div>
+          <label for="company">Companies ID</label>
+           <div class="col-sm-7">
+            <select name="Company" value="<%= model.co_id%>">
+             <% for (const advert of model) { %> 
+              <option value="<%= advert.co_id %>"><%= advert.co_name %></option>
+              <% } %>
+            </select>
+          </div>
+        </div> 
+
+        <div>
+          <button class="btn indigo"><a class="white-text" href="/advertisements">Annuler</a></button>
+          <input class="btn indigo" type="submit" value="Ajouter"/>
+        </div>
+        </div>
+    </form>
+
+
+  </div>
+</main>
+
+
+
+<%- include('../partials/footer_admin') %>

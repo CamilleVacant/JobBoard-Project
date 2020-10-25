@@ -1,0 +1,52 @@
+
+<%- include('../partials/header_admin'); %>
+
+<main>
+  <h2 class="titre">Supprimer une annonce</h2>
+  <div class="row align-center">
+<% for (const advert of model) { %> 
+  <form action="/advertisements/delete_advertisements/<%= advert.ad_id %>" method="post">
+    <div>
+      <label for="Title">Titre de l'annonce</label>
+      <input readonly name="Title" value="<%= advert.ad_title %>" />
+    </div>        
+    <div>
+      <label for="Pubdate">Date de publication</label>
+      <input readonly name="Pubdate" value="<%= advert.ad_pubdate %>" />
+    </div>
+    
+    <div>
+        <label for="Startdate">Début du contrat</label>
+        <input readonly name="Startdate" value ="<%= advert.ad_startdate%>"/>
+    </div>
+
+    <div>
+      <label for="Mission">Mission</label>
+      <input readonly name="Mission" value ="<%= advert.ad_mission%>"/>
+    </div>
+
+    <div>
+      <label for="Jobtype">Type de contrat</label>
+      <input readonly name="Jobtype" value ="<%= advert.ad_jobtype%>"/>
+    </div>
+
+    <div>
+      <label for="Wage">Salaire</label>
+      <input readonly name="Wage" value ="<%= advert.ad_wage%>"/>
+    </div>
+
+    <div>
+      <label for="Wantedprofil">Profil recherché</label>
+      <input readonly name="Wantedprofil" value ="<%= advert.ad_wantedprofil%>"/>
+    </div>
+    <% } %>
+      <div>
+        <input class="btn indigo" type="submit" value="Effacer"/>
+        <button class="btn indigo" ><a class="white-text" href="/advertisements">Annuler</a></button>
+      </div>
+    </form>
+  </div>
+</main>
+
+
+<%- include("footer_admin") -%>

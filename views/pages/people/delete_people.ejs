@@ -1,0 +1,32 @@
+<%- include('../partials/header_admin'); %>
+
+<main>
+  <h2 class="titre">Supprimer un utilisateur</h2>
+  <div class="row align-center">
+  <% for (const person of model) { %> 
+    <form action="/people/delete_people/<%= person.pe_id %>" method="post">
+      <div>
+        <label for="LastName">Nom</label>
+        <input readonly name="LastName" value ="<%= person.pe_lname%>"/>
+      </div>
+  
+      <div>
+        <label for="FirstName">Prénom</label>
+        <input readonly name="FirstName" value ="<%= person.pe_fname%>"/>
+      </div>
+
+      <div>
+        <label for="Email">Adresse e-mail</label>
+        <input readonly name="Email" value ="<%= person.pe_email%>"/>
+      </div>
+    
+      <% } %>  
+      <div>
+        <input class="btn indigo" type="submit" value="Effacer"/>
+        <button class="btn indigo"><a class="white-text" href="/people">Annuler</a></button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<%- include("footer") -%>

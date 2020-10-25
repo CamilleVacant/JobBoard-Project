@@ -1,0 +1,130 @@
+.titre {
+    font-family: 'poppins', sans-serif;
+    text-align: center;
+    }
+
+.logo {
+	height: 64px;
+    }
+
+.input-field label {
+     color: #fff;
+   }
+   /* label focus color */
+.input-field input[type=text]:focus + label {
+     color: #3F51B8;
+   }
+   /* label underline focus color */
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid #3F51B8;
+     box-shadow: 0 1px 0 0 #3F51B8;
+   }
+   /* valid color */
+.input-field input[type=text].valid {
+     border-bottom: 1px solid #3F51B8;
+     box-shadow: 0 1px 0 0 #3F51B8;
+   }
+   /* invalid color */
+.input-field input[type=text].invalid {
+     border-bottom: 1px solid #bb321a;
+     box-shadow: 0 1px 0 0 #bb321a;
+   }
+   /* icon prefix focus color */
+.input-field .prefix.active {
+     color: #3F51B8;
+   }
+input[type=text]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=radio]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label {
+  color: #3F51B8;
+}
+
+   input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+    border-bottom: 1px solid #3F51B8;
+    -webkit-box-shadow: 0 1px 0 0 #3F51B8;
+    box-shadow: 0 1px 0 0 #3F51B8;
+   }
+
+   input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #3F51B8;
+    -webkit-box-shadow: 0 1px 0 0 #3F51B8;
+    box-shadow: 0 1px 0 0 #3F51B8;
+   }
+
+   [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+    border: 2px solid #3F51B8;
+   }
+
+    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+      background-color: #3F51B8;
+  }
+
+  input:not([type]):focus.invalid ~ label, input[type=text]:not(.browser-default):focus.invalid ~ label, input[type=password]:not(.browser-default):focus.invalid ~ label, input[type=email]:not(.browser-default):focus.invalid ~ label, input[type=url]:not(.browser-default):focus.invalid ~ label, input[type=time]:not(.browser-default):focus.invalid ~ label, input[type=date]:not(.browser-default):focus.invalid ~ label, input[type=datetime]:not(.browser-default):focus.invalid ~ label, input[type=datetime-local]:not(.browser-default):focus.invalid ~ label, input[type=tel]:not(.browser-default):focus.invalid ~ label, input[type=number]:not(.browser-default):focus.invalid ~ label, input[type=search]:not(.browser-default):focus.invalid ~ label, textarea.materialize-textarea:focus.invalid ~ label {
+    color: #3F51B8;
+  }
+
+.homescreen {
+    height: 460px;
+    background-image: url(img/homescreen.jpg);
+    background-size: cover;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: #039be5;
+    margin-right: 24px;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+    text-transform: uppercase;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+    color: #0d47a1;
+}
+
+.mg0 {
+	margin : 0px;
+}
+
+.none{
+	display: none;
+}
+
+.toggleBtnHide {
+	display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.padding {
+        padding: 16px 24px;
+
+}
+
+td, th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  border-radius: 2px;
+}
+
+select {
+  display : block;
+}
+
+.margin100 {
+  margin-top : 200px;
+  margin-bottom: 200px;
+}
+
+html, body {
+	height: 100%;
+	margin: 0; padding: 0;
+}
+body {
+	display : table;
+	width: 100%;
+}
+footer {
+	display : table-row;
+	height: 100px; /* à titre d'exemple */
+}

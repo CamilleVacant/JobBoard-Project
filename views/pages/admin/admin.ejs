@@ -1,0 +1,62 @@
+<%- include('../partials/header_admin'); %>
+<h2 class="titre">Page administrateur</h2>
+
+<div class="row center-align">
+    <p>
+        Vous pouvez modifier les base de données suivantes :
+    </p>
+    <div class="col s12 m3">
+        <a href="companies">Entreprises</a>
+    </div>
+    <div class="col s12 m3">
+        <a href="advertisements">Annonces</a>
+    </div>
+    <div class="col s12 m3">
+        <a href="people">Utilisateurs</a>
+    </div>
+    <div class="col s12 m3">
+        <a href="applications">Candidatures</a>
+    </div>
+</div>
+    <h2 class="titre">Toutes les annonces</h2>
+
+<div class="row center-align">
+    <% for (const x of model) { %> 
+        <div class="col s10 offset-s1">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <h4 class="titre"><%= x.ad_title %></h4>
+                    <p><%= x.co_name %></p>
+                </div>
+                <div class="white-text left-align container">
+
+                    <h5>Missions</h5>
+                    <p>
+                        <%= x.ad_mission%>
+                    </p>
+
+                    <h5>Profil</h5>
+                    <p>
+                        <%= x.ad_wantedprofil%>			
+                    </p>
+                    <h5>Salaire</h5>
+                    <p>
+                        <%= x.ad_wage%>
+                    </p>
+
+                    <h5>Type de contrat</h5>
+                    <p>
+                        <%= x.ad_jobtype%>
+                    </p>
+                    <h5>Date de début</h5>
+                    <p>
+                        <%= x.ad_startdate%>
+                    </p>
+                </div>
+                <div class="card-action">
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>
+<%- include('../partials/footer_admin'); %>

@@ -1,0 +1,39 @@
+<%- include('../partials/header_user'); %>
+<main class="row center-align">
+  <h2 class="titre">Consulter mes candidatures</h2>
+  <div>
+    <% if(locals.message) { %>
+        <div class="margin100"><%= message %></div>
+    <% } %>
+
+    <% if (locals.model) { for (const info of model) { %> 
+    <form>
+
+
+    <table>
+      <thread>
+      <tr>
+        <th>Entreprise</th>
+        <th>Annonce</th>
+        <th>Message</th>
+      </tr>
+    </thread>
+
+
+      <tbody>
+        <tr>
+          <td><%= info.co_name %></td>
+          <td><%= info.ad_title %></td>
+          <td><%= info.ap_message %></td>
+        </tr>
+      </tbody>
+      <% }} %>
+
+    </table> 
+    </form>
+
+    <button class="btn indigo"><a class="white-text" href="/home">Rechercher des offres d'emploi</a></button>
+  </div>
+</main>
+
+<%- include("footer_admin") -%>

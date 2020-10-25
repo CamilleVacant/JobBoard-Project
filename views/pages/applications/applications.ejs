@@ -1,0 +1,35 @@
+<%- include('../partials/header_admin'); %>
+
+<h2 class="titre">Toutes les candidatures</h2>
+  <main>
+    <div class="row center-align">
+      <table>
+        <tr>
+          <th>ID</th>  
+          <th>Entreprise</th>
+          <th>Titre de l'annonce</th>
+          <th>Nom du candidat</th>
+          <th>Prénom du candidat</th>
+          <th>Email candidat</th>
+          <th>Téléphone candidat</th>
+          <th>Message envoyé</th>
+        </tr>
+  
+      <% for (const application of model) { %> 
+          <tr>
+            <td><%= application.app_id%></td>
+            <td><%= application.co_name%></td>
+            <td><%= application.ad_title%></td>
+            <td><%= application.first_name %></td>
+            <td><%= application.last_name %></td>
+            <td><%= application.email %></td>
+            <td><%= application.phone %></td>
+            <td><%= application.message %></td>
+          </tr>
+        <% } %>
+   
+      </table> 
+    </div>
+  </main>
+    
+    <%- include('../partials/footer_admin') %>

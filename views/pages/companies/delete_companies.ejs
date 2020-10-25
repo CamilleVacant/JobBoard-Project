@@ -1,0 +1,40 @@
+<%- include('../partials/header_admin'); %>
+<main>
+  <h2 class="titre">Supprimer une entreprise</h2>
+  <div class="row align-center">
+<% for (const company of model) { %> 
+  <form action="/companies/delete_companies/<%= company.co_id %>" method="post">
+    <div>
+      <label for="Name">Nom de l'entreprise</label>
+      <input required readonly name="Name" value="<%= company.co_name %>" />
+    </div>
+      
+    <div>
+      <label for="Address">Adresse</label>
+      <input required readonly name="Address" value="<%= company.co_address %>" />
+    </div>
+      
+    <div>
+        <label for="CP">Code Postal</label>
+        <input required readonly name="CP" value ="<%= company.co_CP%>"/>
+    </div>
+
+    <div>
+      <label for="City">City</label>
+      <input required readonly name="City" value ="<%= company.co_city%>"/>
+    </div>
+      
+    <div>
+      <label for="Description">Description</label>
+      <input required readonly name="Description" value ="<%= company.co_description%>"/>
+    </div>
+    <% } %>  
+    <div>
+      <input class="btn indigo" type="submit" value="Effacer"/>
+      <button class="btn indigo"><a class="white-text" href="/companies">Annuler</a></button>
+    </div>
+  </form>
+  </div>
+</main>
+
+<%- include("footer_admin") -%>

@@ -1,0 +1,35 @@
+<%- include('../partials/header_admin'); %>
+
+<main>
+  <h2 class="titre">Ajouter un utilisateurs</h2>
+  <div class="row align-center">
+    <form action="/people/add_people" method="post">
+      <div>
+        <label for="LastName">Nom</label>
+        <input required name="LastName"/>
+      </div>
+
+      <div>
+        <label for="FirstName">Prénom</label>
+        <input required name="FirstName"/>
+      </div>
+    
+      <div>
+          <label for="Email">Adresse e-mail</label>
+          <input required name="Email"/>
+      </div>
+
+      <div>
+        <label for="password">Mot de passe</label>
+        <input required type='password' name="password"/>
+    </div>
+
+      <div>
+        <button class="btn indigo"><a class="white-text" href="/people">Annuler</a></button>
+        <input class="btn indigo" type="submit" value="Ajouter"/>
+      </div>
+    </form>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>

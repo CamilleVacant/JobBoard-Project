@@ -1,0 +1,32 @@
+<%- include('../partials/header_user'); %>
+<main>
+  <h2 class="titre">Modifier mes informations</h2>
+  <div class="row align-center">
+    <form action="/profil" method="post">
+      <div>
+        <label for="last_name">Nom</label>
+        <input required name="last_name" value="<%= model.pe_lname %>" />
+      </div>
+
+      <div>
+        <label for="first_name">Prénom</label>
+        <input required name="first_name" value="<%= model.pe_fname %>" />
+      </div>
+
+      <div>
+        <label for="Email">E-mail</label>
+        <input required name="Email" value="<%= model.pe_email %>" />
+        <input id="pe_id" type="hidden" name="pe_id" value="<%= model.pe_id%>">
+
+      </div>
+    
+
+      <div>
+        <input class="btn indigo" type="submit" value="Modifier"/>
+      </div>
+
+    </form>
+  </div>
+</main>
+
+<%- include("footer_admin") -%> 
